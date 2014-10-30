@@ -1,3 +1,5 @@
+Scott Burbidge's Mean, Median, Mode assignment for Javascript Dev Accelerator.
+
 sea-b24-mean-median-node
 ========================
 

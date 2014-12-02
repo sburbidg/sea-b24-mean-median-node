@@ -1,0 +1,23 @@
+<html>
+<head>
+  <meta charset='UTF-8'>
+  <title></title>
+</head>
+<body>
+  <h1>No need for a calculator. </br>
+      Do very specific calculations here
+  </h1>
+
+  <div data-ng-app="mmmApp">
+    <div data-ng-controller='meanCtrl'>
+      <label>Mean</label>
+      <input type='text' data-ng-model='meanInput'/>
+      <button data-ng-click="meanCal()">Calculate</button>
+      <br/>
+      <br/>
+      <p>{{mean}}</p>
+    </div>
+  </div>
+  <script src="client_bundle.js"></script>
+</body>
+</html>

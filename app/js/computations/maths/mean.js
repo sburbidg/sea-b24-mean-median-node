@@ -1,11 +1,11 @@
- 'use strict'
+ 'use strict';
 
-var mean = function(numbers) {
+var mean = function(numArray) {
   var sum = 0;
-  for (var i = 0; i < numbers.length; i++) {
-    sum += numbers[i];
+  for (var i = 0; i < numArray.length; i++) {
+    sum += numArray[i];
   }
-  return (sum / numbers.length);
+  return (sum / numArray.length);
 };
 
 module.exports = mean;

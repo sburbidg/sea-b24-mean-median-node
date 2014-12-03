@@ -9,9 +9,9 @@
   </h1>
 
   <div data-ng-app="mmmApp">
-    <div data-ng-controller='meanCtrl'>
+    <div data-ng-controller='meanCtrl' data-ng-init='meanCal()'>
       <label>Mean</label>
-      <input type='text' data-ng-model='meanInput'/>
+      <input type='text' data-ng-model='numInput'/>
       <button data-ng-click="meanCal()">Calculate</button>
       <br/>
       <br/>

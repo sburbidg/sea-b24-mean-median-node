@@ -3,11 +3,11 @@
 module.exports = function(app) {
   app.controller('meanCtrl', ['$scope', '$http', function($scope, $http) {
     $scope.meanCal = function () {
-      var numbers = $scope.meanInput.split(' ');
+      var numArray = $scope.numInput.split(' ');
       $http({
         method: 'POST',
         url: '/api/mean',
-        data: {input: numbers}
+        data: {numList: numArray}
       })
       .success(function(data){
         $scope.mean = data.mean;

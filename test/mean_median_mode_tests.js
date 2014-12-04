@@ -1,7 +1,7 @@
 'use strict';
 
 var expect = require('chai').expect;
-var mmm = require('../lib/mean_median_mode');
+var mmm = require('../app/js/computations/maths/*.js');
 
 describe('Mean', function() {
   it('gets an accurate mean', function() {

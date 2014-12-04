@@ -9,23 +9,23 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-browserify');
 
   grunt.initConfig({
-    // jshint: {
-    //   all: ['lib/*.js'],
-    //   options: {
-    //     jshintrc: true
-    //   }
-    // },
+    jshint: {
+      all: ['app/js/**/*.js'],
+      options: {
+        jshintrc: true
+      }
+    },
 
-    // jscs: {
-    //   src: 'lib/**/*.js',
-    //   options: {
-    //     config: '.jscsrc'
-    //   }
-    // },
+    jscs: {
+      src: 'app/js/**/*.js',
+      options: {
+        config: '.jscsrc'
+      }
+    },
 
-    // simplemocha: {
-    //   src: ['test/**/*.js']
-    // },
+    simplemocha: {
+      src: ['test/**/*.js']
+    },
 
     copy: {
       dev: {
@@ -50,6 +50,6 @@ module.exports = function(grunt) {
       }
     }
   });
-  grunt.registerTask('test', ['jshint', 'jscs', 'simplemocha']);
-  grunt.registerTask('build:dev', ['clean', 'copy:dev', 'browserify:dev']);
+  grunt.registerTask('test', ['jshint', 'jscs']);
+  grunt.registerTask('build:dev', ['clean', 'copy:dev', 'browserify:dev', 'test']);
 };

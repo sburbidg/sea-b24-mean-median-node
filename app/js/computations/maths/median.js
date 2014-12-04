@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 var median = function(numbers) {
   var count = numbers.length;

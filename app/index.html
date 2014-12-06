@@ -2,6 +2,7 @@
 <head>
   <meta charset='UTF-8'>
   <title></title>
+  <link rel="stylesheet" href="./sass/application.css">
 </head>
 <body>
   <h1>No need for a calculator. </br>
@@ -9,13 +10,32 @@
   </h1>
 
   <div data-ng-app="mmmApp">
-    <div data-ng-controller='meanCtrl' data-ng-init='meanCal()'>
-      <label>Mean</label>
-      <input type='text' data-ng-model='numInput'/>
-      <button data-ng-click="meanCal()">Calculate</button>
-      <br/>
-      <br/>
-      <p>{{mean}}</p>
+    <div class="input-cont">
+      <input class="input-field" type='text' data-ng-model='numInput'/>
+    </div>
+    <div class="button-layout" data-ng-controller='meanCtrl' data-ng-init='meanCal()'>
+      <div>
+        <button class="mean-button" data-ng-click="meanCal()">Mean</button>
+        <br/>
+        <br/>
+        <p>{{mean}}</p>
+      </div>
+    </div>
+    <div class="button-layout" data-ng-controller='medianCtrl' data-ng-init='medianCal()'>
+      <div>
+        <button class="median-button" data-ng-click="medianCal()">Median</button>
+        <br/>
+        <br/>
+        <p>{{median}}</p>
+      </div>
+    </div>
+    <div class="button-layout" data-ng-controller='modeCtrl' data-ng-init='modeCal()'>
+      <div>
+        <button class="mode-button" data-ng-click="modeCal()">Mode</button>
+        <br/>
+        <br/>
+        <p>{{mode}}</p>
+      </div>
     </div>
   </div>
   <script src="client_bundle.js"></script>

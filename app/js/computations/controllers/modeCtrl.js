@@ -1,16 +1,16 @@
 'use strict';
 
 module.exports = function(app) {
-  app.controller('meanCtrl', ['$scope', '$http', function($scope, $http) {
-    $scope.meanCal = function() {
+  app.controller('modeCtrl', ['$scope', '$http', function($scope, $http) {
+    $scope.modeCal = function() {
       var numberArray = $scope.numInput.split(' ');
       $http({
         method: 'POST',
-        url: '/api/mean',
+        url: '/api/mode',
         data: {numList: numberArray}
       })
       .success(function(data) {
-        $scope.mean = data.mean;
+        $scope.mode = data.mode;
       })
       .error(function(data) {
         console.log(data);

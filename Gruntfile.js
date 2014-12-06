@@ -7,6 +7,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-browserify');
+  grunt.loadNpmTasks('grunt-sass');
 
   grunt.initConfig({
     jshint: {
@@ -30,7 +31,7 @@ module.exports = function(grunt) {
     copy: {
       dev: {
         cwd: 'app/',
-        src: ['**/*.html'],
+        src: ['**/*.html', '**/sass/*'],
         expand: true,
         dest: 'build/'
       }
@@ -48,8 +49,19 @@ module.exports = function(grunt) {
           transform:['debowerify']
         }
       }
-    }
+    },
+
+    sass: {
+      options: {
+        sourceMap: true
+      },
+      dist: {
+        files: {
+          'build/sass/application.css': 'build/sass/application.scss'
+        }
+      }
+    },
   });
   grunt.registerTask('test', ['jshint', 'jscs']);
-  grunt.registerTask('build:dev', ['clean', 'copy:dev', 'browserify:dev', 'test']);
+  grunt.registerTask('build:dev', ['clean', 'copy:dev', 'browserify:dev', 'sass', 'test']);
 };

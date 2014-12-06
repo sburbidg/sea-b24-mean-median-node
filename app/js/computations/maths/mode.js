@@ -1,11 +1,11 @@
 'use strict';
 
-var mode = function(numbers) {
+var mode = function(numberArray) {
   //http://stackoverflow.com/questions/1063007/arr-sort-does-not-sort-integers-correctly
   function numSort(a, b) {
     return a - b;
   }
-  var sorted = numbers.sort(numSort);
+  var sorted = numberArray.sort(numSort);
   var curCount = 0;
   var curNum = sorted[0];
   var modeCount = 0;

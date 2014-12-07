@@ -25,7 +25,7 @@ app.post('/api/mean', function(req, res) {
 app.post('/api/median', function(req, res) {
   var numberArray = [];
   for(var i = 0; i < req.body.numList.length; i++) {
-    numberArray.push(Number(req.body.numList[i]));
+    numberArray.push(req.body.numList[i]);
   }
   var median = medianCal(numberArray);
 

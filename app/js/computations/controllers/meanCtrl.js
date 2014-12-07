@@ -1,5 +1,4 @@
 'use strict';
-
 module.exports = function(app) {
   app.controller('meanCtrl', ['$scope', '$http', function($scope, $http) {
     $scope.meanCal = function() {

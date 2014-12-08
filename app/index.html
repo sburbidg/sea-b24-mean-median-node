@@ -1,0 +1,43 @@
+<html>
+<head>
+  <meta charset='UTF-8'>
+  <title></title>
+  <link rel="stylesheet" href="./sass/application.css">
+</head>
+<body>
+  <h1>No need for a calculator. </br>
+      Do very specific calculations here
+  </h1>
+
+  <div data-ng-app="mmmApp" data-ng-init='doMean()'>
+    <div class="input-cont">
+      <input class="input-field" type='text' data-ng-model='numInput'/>
+    </div>
+    <div class="button-layout" data-ng-controller='meanCtrl' >
+      <div>
+        <button class="mean-button" data-ng-click="doMean()">Mean</button>
+        <br/>
+        <br/>
+        <p>{{answer}}</p>
+      </div>
+    </div>
+    <div class="button-layout" data-ng-controller='medianCtrl' data-ng-init='doMedian()'>
+      <div>
+        <button class="median-button" data-ng-click="doMedian()">Median</button>
+        <br/>
+        <br/>
+        <p>{{answer}}</p>
+      </div>
+    </div>
+    <div class="button-layout" data-ng-controller='modeCtrl' data-ng-init='doMode()'>
+      <div>
+        <button class="mode-button" data-ng-click="doMode()">Mode</button>
+        <br/>
+        <br/>
+        <p>{{answer}}</p>
+      </div>
+    </div>
+  </div>
+  <script src="client_bundle.js"></script>
+</body>
+</html>

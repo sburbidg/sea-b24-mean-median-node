@@ -1,0 +1,26 @@
+.mean-button {
+  @include button;
+  background-color: grey;
+};
+
+.median-button {
+  @include button;
+  background-color: grey;
+};
+
+.mode-button {
+  @include button;
+  background-color: grey;
+};
+
+button:hover {
+  background-color: black;
+}
+
+.button-layout {
+  display: inline-block;
+  position: relative;
+  top: 30px;
+}
+
+
